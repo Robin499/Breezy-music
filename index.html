@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Breezy Music</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Splash Screen -->
+  <div id="splash-screen">
+    <h1>Breezy Music</h1>
+    <p>Loading your vibe...</p>
+  </div>
+
+  <!-- App -->
+  <div class="app" id="main-content" style="display:none;">
+    <aside class="sidebar">
+      <h2>Breezy</h2>
+      <nav>
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('trending')">Trending</button>
+        <button onclick="showSection('new')">New</button>
+        <button onclick="showSection('artists')">Artists</button>
+        <button onclick="showSection('videos')">Videos</button>
+        <button onclick="showSection('downloads')">Downloads</button>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <input type="text" id="searchBar" placeholder="Search music or videos..." onkeyup="handleSearch()" />
+
+      <section id="home" class="content-section active">
+        <h1>Welcome to Breezy Music</h1>
+        <p>Discover your favorite tunes and artists!</p>
+        <div id="searchResults"></div>
+      </section>
+
+      <section id="trending" class="content-section">
+        <h1>Trending Now</h1>
+        <p>These tracks are 🔥</p>
+      </section>
+
+      <section id="new" class="content-section">
+        <h1>New Releases</h1>
+        <p>Just dropped!</p>
+      </section>
+
+      <section id="artists" class="content-section">
+        <h1>Artists</h1>
+        <ul id="artistList"></ul>
+        <div id="artistSongs"></div>
+      </section>
+
+      <section id="videos" class="content-section">
+        <h1>Videos</h1>
+        <p>Watch music videos here.</p>
+      </section>
+
+      <section id="downloads" class="content-section">
+        <h1>Your Downloads</h1>
+        <ul id="downloadList"></ul>
+      </section>
+
+      <div id="musicPlayer" style="margin-top: 20px;">
+        <audio id="audioPlayer" controls style="width: 100%;"></audio>
+      </div>
+    </main>
+  </div>
+  
+  <script src="script.js"></script>
+  <img src="/images/cover.jpg" alt="Album Cover">
+
+</body>
+</html>
